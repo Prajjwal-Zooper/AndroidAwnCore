@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'maven-publish'
 }
 
 android {
@@ -27,19 +26,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    publishing {
-    publications {
-        release(MavenPublication) {
-            groupId = 'io.jitpack'
-            artifactId = 'library'
-            version = '1.0'
-
-            afterEvaluate {
-                from components.release
-            }
-        }
-    }
-}
 }
 
 dependencies {
